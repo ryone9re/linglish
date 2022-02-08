@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    tty: true
+    volumes:
+      - node:/workspace/node_modules
+      - ../:/workspace:cached
+volumes:
+  node:
